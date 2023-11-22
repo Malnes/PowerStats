@@ -4,6 +4,9 @@ Retrieves number of active power platform resources
 
 How to use:
 - Run the entire script
+
+NB!: You might be prompted to sign in multiple times, so look for a sign-in window on your taskbar
+
 #>
 
 
@@ -23,15 +26,16 @@ $customConnectors = Get-AdminPowerAppConnector
 $settings = Get-TenantSettings
 
 
-Write-Output "`n`n`n`n`n`n`n"
-Write-Output "------- Counts -------"
-
-Write-Output "Environments      : $(($evironments | Measure-Object).Count)"
-Write-Output "Flows             : $(($flows | Measure-Object).Count)"
-Write-Output "PowerApps         : $(($apps | Measure-Object).Count)"
-Write-Output "VirtualAgents     : $(($agents | Measure-Object).Count)"
-Write-Output "PLP policies      : $(($dlps | Measure-Object).Count)"
-Write-Output "Custom COnnectors : $(($customConnectors | Measure-Object).Count)"
-Write-Output "`n`n"
-Write-Output "------- Settings -------"
-write-output $settings
+write-host "`n`n`n`n`n`n`n"
+write-host "------- Counts -------" -ForegroundColor Green  
+write-host "Environments      : $(($evironments | Measure-Object).Count)"
+write-host "Flows             : $(($flows | Measure-Object).Count)"
+write-host "Flow users        : $(($flows.createdBy.userId | select -Unique).count)"
+write-host "PowerApps         : $(($apps | Measure-Object).Count)"
+write-host "PowerApps users   : $(($apps.owner.id | select -Unique).count)"
+write-host "VirtualAgents     : $(($agents | Measure-Object).Count)"
+write-host "PLP policies      : $(($dlps | Measure-Object).Count)"
+write-host "Custom COnnectors : $(($customConnectors | Measure-Object).Count)"
+write-host "`n`n"
+write-host "------- Settings -------" -ForegroundColor Green
+write-host $settings
