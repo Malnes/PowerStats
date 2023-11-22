@@ -25,8 +25,8 @@ $dlps = Get-AdminDlpPolicy
 $customConnectors = Get-AdminPowerAppConnector
 $settings = Get-TenantSettings
 
-
-write-host "`n`n`n`n`n`n`n"
+clear
+write-host "`n`n"
 write-host "------- Counts -------" -ForegroundColor Green  
 write-host "Environments      : $(($evironments | Measure-Object).Count)"
 write-host "Flows             : $(($flows | Measure-Object).Count)"
@@ -36,6 +36,6 @@ write-host "PowerApps users   : $(($apps.owner.id | select -Unique).count)"
 write-host "VirtualAgents     : $(($agents | Measure-Object).Count)"
 write-host "PLP policies      : $(($dlps | Measure-Object).Count)"
 write-host "Custom COnnectors : $(($customConnectors | Measure-Object).Count)"
+write-host "----------------------" -ForegroundColor Green  
+
 write-host "`n`n"
-write-host "------- Settings -------" -ForegroundColor Green
-write-host $settings
