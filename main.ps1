@@ -36,6 +36,17 @@ write-host "PowerApps users   : $(($apps.owner.id | select -Unique).count)"
 write-host "VirtualAgents     : $(($agents | Measure-Object).Count)"
 write-host "PLP policies      : $(($dlps | Measure-Object).Count)"
 write-host "Custom COnnectors : $(($customConnectors | Measure-Object).Count)"
-write-host "----------------------" -ForegroundColor Green  
+write-host "-----------------------" -ForegroundColor Green  
+write-host "---- Some settings ----" -ForegroundColor Green  
+write-host "Disable Environment Creation By Non Admin Users             : $($settings.disableEnvironmentCreationByNonAdminUsers)"
+write-host "Disable Portals Creation By Non Admin Users                 : $($settings.disablePortalsCreationByNonAdminUsers)"
+write-host "Disable Trial Environment Creation By Non Admin Users       : $($settings.disableTrialEnvironmentCreationByNonAdminUsers)"
+write-host "Disable Capacity Allocation By Environment Admins           : $($settings.disableCapacityAllocationByEnvironmentAdmins)"
+write-host "Disable Connection Sharing With Everyone                    : $($settings.disableConnectionSharingWithEveryone)"
+write-host "Disable Developer Environment Creation By Non Admin Users   : $($settings.powerPlatform.governance.disableDeveloperEnvironmentCreationByNonAdminUsers)"
+write-host "Disable Copilot                                             : $($settings.powerPlatform.intelligence.disableCopilot)"
+write-host "-----------------------" -ForegroundColor Green  
+write-host "`n`nDone!`n" -ForegroundColor Green 
 
-write-host "`n`n"
+
+
