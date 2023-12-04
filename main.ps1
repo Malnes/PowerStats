@@ -1,14 +1,7 @@
 <#
-.DESCRIPTION
-Retrieves number of active power platform resources
-
-How to use:
-- Run the entire script
-
-NB!: You might be prompted to sign in multiple times, so look for a sign-in window on your taskbar
-
+How to:
+- Run the entire script. Only tested in PowerShell 7.x
 #>
-
 
 $module = get-module "Microsoft.PowerApps.Administration.PowerShell"
 if(-not $module) {
