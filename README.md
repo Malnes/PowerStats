@@ -1,6 +1,6 @@
 # Power Platform Report
 
-This PowerShell script is designed to manage and monitor Microsoft PowerApps environments, flows, applications, and other related elements within a Power Platform environment. It provides an automated way to retrieve and display various statistics and settings related to PowerApps and Power Automate (formerly Microsoft Flow).
+This PowerShell script is designed to assist IT administrators in understanding current level of adoption of the Power Platform within their organization. It provides a high-level overview, showing the number of active resources within each category, such as Power Apps and Power Automate flows. The script's primary purpose is to quantify these resources in a straightforward manner, enabling IT teams to gauge the overall usage and adoption of the Power Platform in their organization. This aggregated data is crucial for understanding whether the current scale of Power Platform activity warrants the establishment of a more structured governance framework, like a Center of Excellence.
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This PowerShell script is designed to manage and monitor Microsoft PowerApps env
   
 ## Usage
 
-To use the script, simply download it to your local machine. Once downloaded, run the script in a PowerShell terminal. The script will automatically handle the installation of the required "Microsoft.PowerApps.Administration.PowerShell" module (if not already installed) and perform user authentication against the Power Platform. Ensure that you have the necessary administrative privileges on the Power Platform for the script to execute properly.
+To use the script, simply download the **PowerStats.ps1** file to your local machine. Once downloaded, run the script in a PowerShell terminal. The script will automatically handle the installation of the required "Microsoft.PowerApps.Administration.PowerShell" module (if not already installed) and perform user authentication against the Power Platform. Ensure that you have the necessary administrative privileges on the Power Platform for the script to execute properly.
 
 > [!NOTE]
 >
